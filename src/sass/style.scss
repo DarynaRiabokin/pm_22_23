@@ -1,0 +1,145 @@
+$header-bg: #1f232c;
+$search-bg: #31343d;
+$text: #afb5c2;
+$notification: #e7404e;
+$message: #f6bb42;
+
+* {
+    font-family: 'Lato', sans-serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.header-wrapper {
+    background-color: $header-bg;
+    
+    .header {
+        max-width: 1366px;
+        margin: 0 auto;
+        padding: 10px 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo {
+            .logo-link {
+                color: white;
+                text-decoration: none;
+                font-size: 26px;
+                line-height: 26px;
+                cursor: pointer;
+
+                span {
+                    font-weight: 700;
+                }
+            }
+        }
+
+        .center {
+            display: flex;
+            gap: 23px;
+            align-items: center;
+
+            .search-wrapper {
+                width: 460px;
+
+                .search-field {
+                    background: $search-bg url('../../dist/images/search.png') no-repeat calc(100% - 20px) 50%;
+                    color: $text;
+                    width: calc(100% - 64px);
+                    font-size: 18px;
+                    line-height: 18px;
+                    border: 0;
+                    outline: 0;
+                    border-radius: 4px;
+                    padding: 6px 52px 6px 12px;
+                }
+            }   
+
+            .notifications {
+                position: relative;
+                cursor: pointer;
+
+                .notifications-icon {
+                    display: block;
+                    width: 18px;
+                    height: 24px;
+                    background: url('/dist/images/notification.png') no-repeat 50% 50%;
+                }
+
+                span {
+                    position: absolute;
+                    right: -5px;
+                    top: -5px;
+                    display: block;
+                    width: 12px;
+                    height: 12px;
+                    text-align: center;
+                    border-radius: 9999px;
+                    background-color: $notification;
+                    color: white;
+                    font-size: 10px;
+                }
+            }
+
+            .messages {
+                position: relative;
+                cursor: pointer;
+
+                .messages-icon {
+                    display: block;
+                    width: 25px;
+                    height: 18px;
+                    background: url('/dist/images/email.png') no-repeat 50% 50%;
+                }
+
+                span {
+                    position: absolute;
+                    right: -5px;
+                    top: -5px;
+                    display: block;
+                    width: 12px;
+                    height: 12px;
+                    text-align: center;
+                    border-radius: 9999px;
+                    background-color: $message;
+                    color: white;
+                    font-size: 10px;
+                }
+            }
+        }
+
+        .user-btn {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            border: 0;
+            outline: 0;
+            background-color: transparent;
+            cursor: pointer;
+
+            .avatar {
+                width: 34px;
+                height: 34px;
+                border-radius: 50%;
+            }
+
+            .label {
+                color: $text;
+                font-size: 18px;
+                line-height: 18px;
+            }
+
+            .arrow-down-icon {
+                display: block;
+                width: 11px;
+                height: 10px;
+                background: url('/dist//images/arrow-down.png') no-repeat 50% 50%;
+            }
+        }
+    }
+}
+
