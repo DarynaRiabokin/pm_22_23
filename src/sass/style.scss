@@ -3,6 +3,7 @@ $search-bg: #31343d;
 $text: #afb5c2;
 $notification: #e7404e;
 $message: #f6bb42;
+$sidebar-bg: #232730;
 
 * {
     font-family: 'Lato', sans-serif;
@@ -13,11 +14,100 @@ html, body {
     padding: 0;
 }
 
+.dashboard-icon,
+.charts-icon,
+.tasks-icon,
+.comments-icon,
+.settings-icon,
+.feedback-icon,
+.links-icon,
+.social-icon,
+.mail-icon,
+.achievements-icon,
+.logout-icon {
+    margin: 0 10px 0 30px;
+    display: block;
+    background-color: $text;
+}
+
+.dashboard-icon {
+    width: 22px;
+    height: 14px;
+    mask-image: url('/dist/images/dashboard-icon.svg');
+}
+
+.charts-icon {
+    width: 22px;
+    height: 24px;
+    mask-image: url('/dist/images/charts-icon.svg');
+}
+
+.tasks-icon {
+    width: 23px;
+    height: 17px;
+    mask-image: url('/dist/images/tasks-icon.svg');
+}
+
+.comments-icon {
+    width: 22px;
+    height: 18px;
+    mask-image: url('/dist/images/comment-icon.svg');
+}
+
+.settings-icon {
+    width: 22px;
+    height: 22px;
+    mask-image: url('/dist/images/settings-icon.svg');
+}
+
+.feedback-icon {
+    width: 27px;
+    height: 25px;
+    mask-image: url('/dist/images/feedback-icon.svg');
+}
+
+.links-icon {
+    width: 23px;
+    height: 20px;
+    mask-image: url('/dist/images/link-icon.svg');
+}
+
+.social-icon {
+    width: 22px;
+    height: 24px;
+    mask-image: url('/dist/images/social-icon.svg');
+}
+
+.mail-icon {
+    width: 23px;
+    height: 16px;
+    mask-image: url('/dist/images/email-icon.svg');
+}
+
+.achievements-icon {
+    width: 21px;
+    height: 24px;
+    mask-image: url('/dist/images/achievement-icon.svg');
+}
+
+.logout-icon {
+    width: 22px;
+    height: 24px;
+    mask-image: url('/dist/images/logout-icon.svg');
+}
+
+.arrow-icon {
+    display: block;
+    width: 13px;
+    height: 13px;
+    background-color: $text;
+    mask-image: url('/dist/images/arrow.svg');
+}
+
 .header-wrapper {
     background-color: $header-bg;
     
     .header {
-        max-width: 1366px;
         margin: 0 auto;
         padding: 10px 25px;
         display: flex;
@@ -143,3 +233,62 @@ html, body {
     }
 }
 
+#sidebar {
+    height: auto;
+    min-height: calc(100vh - 57px);
+    background-color: $sidebar-bg;
+
+    .nav{
+        display: block;
+        line-height: 40px;
+        
+    
+        .nav-item {
+            color: $text;
+            cursor: pointer;
+    
+            a {
+                text-decoration: none;
+                font-size: 13px;
+                color: inherit;
+            }
+    
+            &:hover {
+                color: #fff;
+    
+                .arrow-icon,
+                .icon {
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+
+    .collapse-menu {
+        background: transparent;
+        border: 0;
+        color: $text;
+        font-size: 13px;
+        cursor: pointer;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        margin: 60px auto 0 35px;
+
+        .collapse-btn-icon {
+            display: block;
+            width: 23px;
+            height: 23px;
+            mask-image: url('/dist/images/12345.svg');
+            background-color: #000;
+        }
+    
+        &:hover {
+            color: #fff;
+
+            .collapse-btn-icon {
+                background-color: #fff;
+            }
+        }
+    }
+}

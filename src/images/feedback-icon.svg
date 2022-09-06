@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 25" width="27" height="25">
+	<title>Shape 3</title>
+	<defs>
+		<image width="27" height="25" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAZCAYAAADAHFVeAAAAAXNSR0IArs4c6QAAAaZJREFUSEvNldFNwzAQhv8LEjxSJqCdgLBAkzxCQMITIDYoExAmoCPQCYwEgcc0XYAyAWGD9JFKtZFL09AmIXYoCEt+8vk+/3fnO8IfLmrC4mEcMN8JTO8aw/jj6AxSchAxdty9MwGaw8JRAsh9AAnznc6vwfjDqAeSNzmALpjfvdUFaivjPGph23oF0PriPMVUdBjzUh2gPiyMVUFclTi91i0WLRh/itoQ1vOaqoybwhKH7MhL6tQVYCpccmfrgKR0AWkDZANo1zkCMAZkAtBYEg3pffayHt4lTP0dAOeajjXYcxOldpCFOYd9FoA63NX1VG9Hb5jO7EzhShh5GNmANdwQcAIIl/neOHtUMWebARZAClhajT9UWAqqhKmDZQ+sT8yqhRAeO/VUKgrr23/Gw1hdcgx4MfMdt8r+X8GkgSplmjLf2WuqzBQG5juV0ao84PeRC8uKKl4ZV+aySYGUwggDkAhU0503Z2kFkPMWl69GsHykTAD0MRX9srm1mHM9AGrvQtIlO+n2jUp/MZVbVZB1Z0uopNQYZliFWuZaw1PLk4bRBw96sRr9Pj64AAAAAElFTkSuQmCC"/>
+	</defs>
+	<style>
+	</style>
+	<use id="Shape 3" href="#img1" transform="matrix(1,0,0,1,0,0)"/>
+</svg>

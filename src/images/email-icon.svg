@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 16" width="23" height="16">
+	<title>email-icon</title>
+	<defs>
+		<image width="23" height="16" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAQCAYAAAD9L+QYAAAAAXNSR0IArs4c6QAAAfBJREFUOE+llE+IzGEcxj/POzMXnESbKA5KuEqJkiKldlkr1NrWkl1WUXtQSvmX7GFLkZyUTG275aKRuZAT5aDkwkVZiYu92NUeZn7vo9/srMaanXZn3uP7fr+f53nf3/P9aXT0aVuSUQ/oNvAdKNHaWgNMoNihx+OFr7JvKdBm63pr3Er3T4lzjmxXfrzgdCeifUHK4lhsVsDiWS6JA+UQ7gJdyo8VviDWV4DmhEL4YMeXwOqliBjfy0UPJyE8MewAplLn34C1cyBbNxziw+BQBG9ZjICsCw5JEYdXwLpqz//w6sGYc6WLoZx9YOtwIwHZ7TEwJesFkK2pXRAO6HWSxIGQ0ZDgVB2BaaTjMquMH9U5bwSvlL/rOda+LT9euAZc/QswE8pldjkpLcfh0wI3awj/KLgD9EVrJBBnLD1HvCkTurKOI8Ay0Fvw8FKcfzY6L3wZ2D2bJJ+1M++Dkoh007B/NmAeCmil4co8gbrOf8juj6q89Z7ahjRuQnuBzf+ApEHZGwyXGn3QSaRe7EHgwGJiOFcjdNr2VsRQde9X7RD9jnZ3JoQ+2weXAq4ROBnxTsEZYDodovRHFWx1S3SCjzYDrvaUJXptjgCdKXzG+H5Q2Nis4/lm0ikHb0rhh4CONHLpVSoBaG2tACYl+v8AElTkGKwtcgwAAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+	</style>
+	<use id="email-icon" href="#img1" transform="matrix(1,0,0,1,0,0)"/>
+</svg>
