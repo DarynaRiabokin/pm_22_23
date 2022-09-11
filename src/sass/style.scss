@@ -4,6 +4,8 @@ $text: #afb5c2;
 $notification: #e7404e;
 $message: #f6bb42;
 $sidebar-bg: #232730;
+$twitter: #67b7f0;
+$content-bg: #F6F6F6;
 
 * {
     font-family: 'Lato', sans-serif;
@@ -237,6 +239,7 @@ html, body {
     height: auto;
     min-height: calc(100vh - 57px);
     background-color: $sidebar-bg;
+    transition: width 0.3s linear;
 
     .nav{
         display: block;
@@ -246,11 +249,13 @@ html, body {
         .nav-item {
             color: $text;
             cursor: pointer;
+            height: 40px;
     
             a {
                 text-decoration: none;
                 font-size: 13px;
                 color: inherit;
+                animation: openAnimation linear 0.3s;
             }
     
             &:hover {
@@ -273,14 +278,20 @@ html, body {
         display: flex;
         gap: 20px;
         align-items: center;
-        margin: 60px auto 0 35px;
+        margin: 60px auto 0 25px;
+
+        span {
+            animation: openAnimation linear 0.3s;
+        }
 
         .collapse-btn-icon {
             display: block;
             width: 23px;
             height: 23px;
-            mask-image: url('/dist/images/12345.svg');
+            mask-image: url('/dist/images/collapse-icon.svg');
             background-color: $text;
+            transform: rotate(180deg);
+            transition: transform 0.3s;
         }
     
         &:hover {
@@ -290,5 +301,67 @@ html, body {
                 background-color: #fff;
             }
         }
+    }
+
+    &.closed {
+        width: 150px;
+
+        .nav {
+            .nav-item {
+                a {
+                    display: none;
+                }
+            }
+        }
+
+        .collapse-menu {
+            .collapse-btn-icon {
+                transform: rotate(0deg);
+            }
+
+            span {
+                display: none;
+            }
+        }
+    }
+}
+
+#content {
+    background-color: $content-bg;
+
+    .twitter {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $twitter;
+        border-radius: 9999px;
+
+        .twitter-icon {
+            display: block;
+            width: 35px;
+            height: 35px;
+            mask-image: url('/dist/images/twitter-icon.svg');
+            background-color: #fff;
+        }
+    }
+}
+
+@keyframes openAnimation {
+    0% {
+        display: none;
+        opacity: 0;
+        position: absolute;
+    }
+    99% {
+        display: block;
+        opacity: 0;
+        position: absolute;
+    }
+    100% {
+        display: block;
+        opacity: 1;
+        position: relative;
     }
 }
