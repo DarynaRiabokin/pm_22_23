@@ -6,6 +6,9 @@ $message: #f6bb42;
 $sidebar-bg: #232730;
 $twitter: #67b7f0;
 $content-bg: #F6F6F6;
+$sales: #a5c562;
+$visitors: #ff503f;
+$messages: #f5bb42;
 
 * {
     font-family: 'Lato', sans-serif;
@@ -328,6 +331,7 @@ html, body {
 
 #content {
     background-color: $content-bg;
+    
 
     .twitter {
         width: 60px;
@@ -343,6 +347,65 @@ html, body {
             width: 35px;
             height: 35px;
             mask-image: url('/dist/images/twitter-icon.svg');
+            background-color: #fff;
+        }
+    }
+
+    .sales {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $sales;
+        border-radius: 9999px;
+
+        .sales-icon {
+            display: block;
+            width: 20px;
+            height: 35px;
+            mask-image: url('/dist/images/sales-icon.svg');
+            mask-repeat: no-repeat;
+            background-color: #fff;
+        }
+    }
+
+    .visitors {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $visitors;
+        border-radius: 9999px;
+        padding-left: 10px;
+
+        .visitors-icon {
+            display: block;
+            width: 40px;
+            height: 35px;
+            mask-image: url('/dist/images/visitors-icon.svg');
+            mask-repeat: no-repeat;
+            background-color: #fff;
+        }
+    }
+
+    .messages {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $messages;
+        border-radius: 9999px;
+        padding-left: 15px;
+
+        .messages-icon {
+            display: block;
+            width: 40px;
+            height: 25px;
+            mask-image: url('/dist/images/messages-icon.svg');
+            mask-repeat: no-repeat;
             background-color: #fff;
         }
     }
