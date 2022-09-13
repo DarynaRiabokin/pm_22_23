@@ -9,6 +9,7 @@ $content-bg: #F6F6F6;
 $sales: #a5c562;
 $visitors: #ff503f;
 $messages: #f5bb42;
+$to-do-list-header: #1fb5ab;
 
 * {
     font-family: 'Lato', sans-serif;
@@ -332,81 +333,135 @@ html, body {
 #content {
     background-color: $content-bg;
     
-
-    .twitter {
-        width: 60px;
-        height: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: $twitter;
-        border-radius: 9999px;
-
-        .twitter-icon {
-            display: block;
-            width: 35px;
-            height: 35px;
-            mask-image: url('/dist/images/twitter-icon.svg');
-            background-color: #fff;
-        }
-    }
-
-    .sales {
-        width: 60px;
-        height: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: $sales;
-        border-radius: 9999px;
-
-        .sales-icon {
-            display: block;
-            width: 20px;
-            height: 35px;
-            mask-image: url('/dist/images/sales-icon.svg');
-            mask-repeat: no-repeat;
-            background-color: #fff;
-        }
-    }
-
-    .visitors {
-        width: 60px;
-        height: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: $visitors;
-        border-radius: 9999px;
-        padding-left: 10px;
-
-        .visitors-icon {
-            display: block;
-            width: 40px;
-            height: 35px;
-            mask-image: url('/dist/images/visitors-icon.svg');
-            mask-repeat: no-repeat;
-            background-color: #fff;
-        }
-    }
-
+    .twitter,
+    .sales,
+    .visitors,
     .messages {
         width: 60px;
         height: 60px;
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: $messages;
         border-radius: 9999px;
+
+        .twitter-icon,
+        .sales-icon,
+        .visitors-icon,
+        .messages-icon {
+            display: block;
+            background-color: #fff;
+            mask-repeat: no-repeat;
+        }
+
+    }
+
+    .twitter {
+        background-color: $twitter;
+
+        .twitter-icon {
+            width: 35px;
+            height: 35px;
+            mask-image: url('/dist/images/twitter-icon.svg');
+        }
+    }
+
+    .sales {
+        background-color: $sales;
+
+        .sales-icon {
+            width: 20px;
+            height: 35px;
+            mask-image: url('/dist/images/sales-icon.svg');
+        }
+    }
+
+    .visitors {
+        background-color: $visitors;
+        padding-left: 10px;
+
+        .visitors-icon {
+            width: 40px;
+            height: 35px;
+            mask-image: url('/dist/images/visitors-icon.svg');
+        }
+    }
+
+    .messages {
+        background-color: $messages;
         padding-left: 15px;
 
         .messages-icon {
-            display: block;
             width: 40px;
             height: 25px;
             mask-image: url('/dist/images/messages-icon.svg');
-            mask-repeat: no-repeat;
-            background-color: #fff;
+        }
+    }
+
+    .to-do-list {
+        display: block;
+        align-items: center;
+        width: 100%;
+
+        .to-do-header {
+            background-color: $to-do-list-header;
+            color: #fff;
+            position: relative;
+            border-top-right-radius: 7px;
+            border-top-left-radius: 7px;
+
+            .to-do-header-icon {
+                width: 20px;
+                height: 20px;
+                display: block;
+                background-color: #fff;
+                mask-repeat: no-repeat;
+                mask-image: url('/dist/images/plus.svg');
+                position: absolute;
+                right: 15px;
+                top: 20px;
+            }            
+        }
+
+        .to-do-list-items {
+
+            .to-do-item {
+                background-color: $content-bg;
+                align-items: center;
+    
+                .ellipsis-icon,
+                .check-icon,
+                .x-icon {
+                    display: block;
+                    background-color: $text;
+                    mask-repeat: no-repeat;
+                    mask-position: center;
+                }
+    
+                .ellipsis-icon {
+                    width: 4px;
+                    height: 15px;
+                    mask-image: url('/dist/images/ellipsis.svg');
+                }
+    
+                .check-icon {
+                    height: 10px;
+                    width: 20px;
+                    mask-image: url('/dist/images/check-icon.svg');
+                }
+    
+                .x-icon {
+                    width: 10px;
+                    height: 10px;
+                    mask-image: url('/dist/images/x.svg');
+                }
+    
+                span {
+                    display: block;
+                    margin: 0;
+                    margin-left: 10px;
+                    margin-right: auto;
+                }
+            }
         }
     }
 }
