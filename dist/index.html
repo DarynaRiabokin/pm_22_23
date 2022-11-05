@@ -36,9 +36,9 @@
             </button>
         </div>
     </header>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-3" id="sidebar">
+    <div class="container-fluid p-0 layout">
+        <div class="d-flex">
+            <div id="sidebar">
                 <ul class="nav">
                     <li class="d-flex align-items-center nav-item">
                         <i class="dashboard-icon icon"></i>
@@ -58,6 +58,7 @@
                     <li class="d-flex align-items-center nav-item">
                         <i class="comments-icon icon"></i>
                         <a href="#">Comments</a>
+                        <span class="badge bg-warning rounded-3 m-auto">9</span>
                         <i class="arrow-icon ms-auto me-4"></i>
                     </li>
                     <li class="d-flex align-items-center nav-item">
@@ -101,19 +102,19 @@
                     <span>Collapse menu</span>
                 </button>
             </div>
-            <div class="col-9 p-5" id="content">
-                <div class="row d-flex justify-content-between">
+            <div class="p-5 w-100" id="content">
+                <div class="d-flex justify-content-between">
                     <div class="d-flex gap-3 bg-white p-4 rounded-3 w-auto">
                         <div class="twitter">
                             <i class="twitter-icon"></i>
                         </div>
                         <div>
-                            <div class="row">
+                            <div>
                                 <span class="h4 fw-bolder">
                                     400
                                 </span>
                             </div>
-                            <div class="row">
+                            <div>
                                 <span class="text-secondary">
                                     Mentioned
                                 </span>
@@ -125,7 +126,7 @@
                             <i class="sales-icon"></i>
                         </div>
                         <div>
-                            <div class="row">
+                            <div>
                                 <span class="h4 fw-bolder">
                                     13140 $
                                 </span>
@@ -142,7 +143,7 @@
                             <i class="visitors-icon"></i>
                         </div>
                         <div>
-                            <div class="row">
+                            <div>
                                 <span class="h4 fw-bolder">
                                     9001
                                 </span>
@@ -157,7 +158,7 @@
                             <i class="messages-icon"></i>
                         </div>
                         <div>
-                            <div class="row">
+                            <div>
                                 <span class="h4 fw-bolder">
                                     350
                                 </span>
@@ -168,71 +169,76 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="row">
-                    <canvas class="col-6"></canvas>
-                </div> -->
-                <div class="row mt-3">
-                    <div class="col-6 d-flex bg-white p-0 rounded-3">
-                        <div class="to-do-list ">
-                            <div class="to-do-header p-2">
-                                <span class="fs-4">ToDo List</span>
-                                <i class="to-do-header-icon"></i>
+                <div class="d-flex justify-content-between">
+                    <div class="mw-75">
+                        <img
+                            class="my-3 d-block"
+                            src="/dist/images/site-statistic.png"
+                            width="618"
+                            height="391"
+                            alt="site statistic"
+                        />
+                        <div class="mt-3">
+                            <div class="d-flex bg-white p-0 rounded-3">
+                                <div class="to-do-list ">
+                                    <div class="to-do-header p-2">
+                                        <span class="fs-4">ToDo List</span>
+                                        <i class="to-do-header-icon cursor-pointer"></i>
+                                    </div>
+                                    <div class="d-flex flex-column p-2 gap-3 to-do-list-items">
+                                    </div>
+                                </div>
                             </div>
-                            <div class="d-flex flex-column p-2 gap-3 to-do-list-items">
-                                <div class="to-do-item text-secondary p-2 d-flex rounded-3">
-                                    <i class="ellipsis-icon"></i>
-                                    <i class="ellipsis-icon"></i>
-                                    <span >Do your ToDo list today at 6AM GMT</span>
-                                    <i class="check-icon"></i>
-                                    <i class="x-icon"></i>
+                            <div class="d-flex gap-3">
+                                <div class="w-100 bg-white mt-3 rounded-3 p-3">
+                                    <span class="text-danger fw-bolder h5">
+                                        113/200 GB
+                                </span>
+                                <br>
+                                <span class="text-secondary h6">
+                                    From your hosting usage
+                                </span>
+                                <div class="progress mt-2">
+                                    <div class="rounded-3 progress-bar bg-danger" role="progressbar" style="width: 55%" aria-valuenow="113" aria-valuemin="0" aria-valuemax="200"></div>
                                 </div>
-                                <div class="to-do-item text-secondary p-2 d-flex rounded-3">
-                                    <i class="ellipsis-icon"></i>
-                                    <i class="ellipsis-icon"></i>
-                                    <span >Do your ToDo list today at 6AM GMT</span>
-                                    <i class="check-icon"></i>
-                                    <i class="x-icon"></i>
-                                </div>
-                                <div class="to-do-item text-secondary p-2 d-flex rounded-3">
-                                    <i class="ellipsis-icon"></i>
-                                    <i class="ellipsis-icon"></i>
-                                    <span >Do your ToDo list today at 6AM GMT</span>
-                                    <i class="check-icon"></i>
-                                    <i class="x-icon"></i>
-                                </div>
-                                <div class="to-do-item text-secondary p-2 d-flex rounded-3">
-                                    <i class="ellipsis-icon"></i>
-                                    <i class="ellipsis-icon"></i>
-                                    <span >Do your ToDo list today at 6AM GMT</span>
-                                    <i class="check-icon"></i>
-                                    <i class="x-icon"></i>
+                            </div>
+                            <div class="w-100 bg-white mt-3 rounded-3 p-3">
+                                <span class="text-warning fw-bolder h5">
+                                    535/986
+                                </span>
+                                <br>
+                                <span class="text-secondary h6">
+                                    Emails read
+                                </span>
+                                <div class="progress mt-2">
+                                    <div class="rounded-3 progress-bar bg-warning" role="progressbar" style="width: 54%" aria-valuenow="535" aria-valuemin="0" aria-valuemax="986"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row d-flex gap-3">
-                        <div class="col-3 bg-white mt-3 rounded-3 p-3">
-                            <span class="text-danger fw-bolder h5">
-                                113/200 GB
-                            </span>
-                            <br>
-                            <span class="text-secondary h6">
-                                From your hosting usage
-                            </span>
-                            <div class="progress mt-2">
-                                <div class="rounded-3 progress-bar bg-danger" role="progressbar" style="width: 55%" aria-valuenow="113" aria-valuemin="0" aria-valuemax="200"></div>
-                            </div>
+                    <div class="bg-white p-4 rounded-3 mt-3 notifications-list">
+                        <div class="d-flex justify-content-between">
+                            <span class="text-secondary">Notifications</span>
+                            <i class="settings-icon cursor-pointer"></i>
                         </div>
-                        <div class="col-3 bg-white mt-3 rounded-3 p-3">
-                            <span class="text-warning fw-bolder h5">
-                                535/986
-                            </span>
-                            <br>
-                            <span class="text-secondary h6">
-                                Emails read
-                            </span>
-                            <div class="progress mt-2">
-                                <div class="rounded-3 progress-bar bg-warning" role="progressbar" style="width: 54%" aria-valuenow="535" aria-valuemin="0" aria-valuemax="986"></div>
+                        <div class="text-danger notifications-items">
+                            <div>
+                                <div class="twitter-item">
+                                    <i class="twitter-icon"></i>
+                                </div>
+                                <span>There are 5 new twitter messages are waiting you for reply them!</span>
+                            </div>
+                            <div>
+                                <div class="messages-item">
+                                    <i class="messages-icon"></i>
+                                </div>
+                                <span>There are 5 new twitter messages are waiting you for reply them!</span>
+                            </div>
+                            <div>
+                                <div class="sales-item">
+                                    <i class="sales-icon"></i>
+                                </div>
+                                <span>There are 5 new twitter messages are waiting you for reply them!</span>
                             </div>
                         </div>
                     </div>

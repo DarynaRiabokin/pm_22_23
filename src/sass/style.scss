@@ -20,6 +20,10 @@ html, body {
     padding: 0;
 }
 
+.cursor-pointer {
+    cursor: pointer;
+}
+
 .dashboard-icon,
 .charts-icon,
 .tasks-icon,
@@ -240,6 +244,7 @@ html, body {
 }
 
 #sidebar {
+    width: 370px;
     height: auto;
     min-height: calc(100vh - 57px);
     background-color: $sidebar-bg;
@@ -330,9 +335,11 @@ html, body {
     }
 }
 
-#content {
+.layout {
     background-color: $content-bg;
-    
+}
+
+#content {
     .twitter,
     .sales,
     .visitors,
@@ -427,6 +434,15 @@ html, body {
             .to-do-item {
                 background-color: $content-bg;
                 align-items: center;
+
+                .to-do-input {
+                    margin-left: 10px;
+                    display: block;
+                    width: 100%;
+                    border: none;
+                    outline: none;
+                    background-color: transparent;
+                }
     
                 .ellipsis-icon,
                 .check-icon,
@@ -444,15 +460,17 @@ html, body {
                 }
     
                 .check-icon {
-                    height: 10px;
-                    width: 20px;
+                    height: 15px;
+                    width: 15px;
                     mask-image: url('/dist/images/check-icon.svg');
+                    mask-size: 15px;
                 }
     
                 .x-icon {
-                    width: 10px;
-                    height: 10px;
+                    width: 15px;
+                    height: 15px;
                     mask-image: url('/dist/images/x.svg');
+                    mask-size: 10px;
                 }
     
                 span {
@@ -464,6 +482,72 @@ html, body {
             }
         }
     }
+}
+
+.notifications-list {
+
+    .settings-icon {
+        width: 15px;
+        height: 15px;
+        mask-image: url('/dist/images/settings-icon.svg');
+        background-color: $text;
+        mask-size: 15px;
+    }
+
+    .twitter-item,
+    .sales-item,
+    .messages-item {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 9999px;
+
+        .twitter-icon,
+        .sales-icon,
+        .messages-icon {
+            display: block;
+            background-color: #fff;
+            mask-repeat: no-repeat;
+        }
+
+    }
+    
+    .notifications-items {
+            
+        .twitter-item {
+            background-color: $twitter;
+    
+            .twitter-icon {
+                width: 20px;
+                height: 20px;
+                mask-image: url('/dist/images/twitter-icon.svg');
+            }
+        }
+    
+        .messages-item {
+            background-color: $messages;
+            padding-left: 5px;
+    
+            .messages-icon {
+                width: 20px;
+                height: 15px;
+                mask-image: url('/dist/images/messages-icon.svg');
+            }
+        }
+        
+        .sales-item {
+            background-color: $sales;
+    
+            .sales-icon {
+                width: 15px;
+                height: 25px;
+                mask-image: url('/dist/images/sales-icon.svg');
+            }
+        }
+    }
+
 }
 
 @keyframes openAnimation {
