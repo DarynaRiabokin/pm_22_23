@@ -515,35 +515,94 @@ html, body {
     }
     
     .notifications-items {
+        padding: 20px 15px;
+
+        .twitter-div,
+        .message-div,
+        .sales-div {
+            position: relative;
+            color: #fff;
+            padding: 20px;
+
+            &::before {
+                content: ' ';
+                display: block;
+                position: absolute;
+                top: calc(50% - 3.5px);
+                left: -5px;
+                width: 10px;
+                height: 10px;
+                transform: rotate(45deg);
+                background-color: inherit;
+            }
+        }
             
-        .twitter-item {
-            background-color: $twitter;
-    
-            .twitter-icon {
-                width: 20px;
-                height: 20px;
-                mask-image: url('/dist/images/twitter-icon.svg');
+        .twitter-container {
+            display: flex;
+            align-items: center;
+
+            .twitter-item {
+                background-color: $twitter;
+                margin-right: 15px;
+                width: 40px;
+                height: 40px;
+        
+                .twitter-icon {
+                    width: 25px;
+                    height: 25px;
+                    mask-image: url('/dist/images/twitter-icon.svg');
+                }
+            }
+
+            .twitter-div {
+                background-color: #8ac6f0;
             }
         }
     
-        .messages-item {
-            background-color: $messages;
-            padding-left: 5px;
-    
-            .messages-icon {
-                width: 20px;
-                height: 15px;
-                mask-image: url('/dist/images/messages-icon.svg');
+        .messages-container {
+            display: flex;
+            align-items: center;
+            padding-top: 15px;
+            padding-bottom: 15px;
+
+            .messages-item {
+                background-color: $messages;
+                padding-left: 5px;
+                margin-right: 15px;
+                width: 40px;
+                height: 40px;
+        
+                .messages-icon {
+                    width: 30px;
+                    height: 25px;
+                    mask-image: url('/dist/images/messages-icon.svg');
+                }
+            }
+
+            .message-div {
+                background-color: #f2ca78;
             }
         }
         
-        .sales-item {
-            background-color: $sales;
-    
-            .sales-icon {
-                width: 15px;
-                height: 25px;
-                mask-image: url('/dist/images/sales-icon.svg');
+        .sales-container {
+            display: flex;
+            align-items: center;
+
+            .sales-item {
+                background-color: #b5d07d;
+                margin-right: 15px;
+                width: 40px;
+                height: 40px;
+        
+                .sales-icon {
+                    width: 20px;
+                    height: 30px;
+                    mask-image: url('/dist/images/sales-icon.svg');
+                }
+            }
+
+            .sales-div {
+                background-color: $sales;
             }
         }
     }
