@@ -18,6 +18,8 @@ $to-do-list-header: #1fb5ab;
 html, body {
     margin: 0;
     padding: 0;
+    background: rgb(35,39,48);
+    background: linear-gradient(90deg, rgba(35,39,48,1) 50%, rgba(246,246,246,1) 50%);
 }
 
 .cursor-pointer {
@@ -38,6 +40,30 @@ html, body {
     margin: 0 10px 0 30px;
     display: block;
     background-color: $text;
+}
+
+.calendar-arrow-left,
+.calendar-arrow-right {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: #7c95be;
+    mask-image: url('/dist/images/arrow.svg');
+    mask-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.calendar-arrow-left {
+    transform: rotate(180deg);
+}
+
+.location-icon {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    mask-image: url('/dist/images/location.svg');
+    mask-repeat: no-repeat;
 }
 
 .dashboard-icon {
@@ -402,6 +428,22 @@ html, body {
             height: 25px;
             mask-image: url('/dist/images/messages-icon.svg');
         }
+    }
+
+    .center-container {
+        max-width: 617px;
+        width: 100%;
+
+        .site-statistic {
+            max-width: 617px;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .widgets {
+        max-width: 325px;
+        width: 100%;
     }
 
     .to-do-list {

@@ -1,10 +1,7 @@
-let todoList = [
-    [1, 'Do your ToDo list today at 6AM GMT']
-];
+let todoList = [];
 
 const sidebar = document.getElementById('sidebar');
 const collapseButton = document.getElementById('collapse-menu');
-const addTodoButton = document.querySelector('.to-do-header-icon');
 const todoListItems = document.querySelector('.to-do-list-items');
 
 const onChangeInput = (event) => {
@@ -22,22 +19,28 @@ const onDelete = (id) => {
 
 const renderTodoList = () => {
     todoListItems.innerHTML = todoList.map(todoItem => `
-    <div class="to-do-item text-secondary p-2 d-flex rounded-3" data-key="${todoItem[0]}">
-        <i class="ellipsis-icon"></i>
-        <i class="ellipsis-icon"></i>
-        <input
-            class="to-do-input text-secondary"
-            onchange="onChangeInput(event);"
-            value="${todoItem[1]}"
-            data-key="${todoItem[0]}"
-        >
-        <i class="check-icon cursor-pointer" onclick="onDelete(${todoItem[0]});"></i>
-        <i class="x-icon cursor-pointer" onclick="onDelete(${todoItem[0]});"></i>
-    </div>
-`).join('');
+        <div class="to-do-item text-secondary p-2 d-flex rounded-3" data-key="${todoItem[0]}">
+            <i class="ellipsis-icon"></i>
+            <i class="ellipsis-icon"></i>
+            <input
+                class="to-do-input text-secondary"
+                onchange="onChangeInput(event);"
+                value="${todoItem[1]}"
+                data-key="${todoItem[0]}"
+            >
+            <i class="check-icon cursor-pointer" onclick="onDelete(${todoItem[0]});"></i>
+            <i class="x-icon cursor-pointer" onclick="onDelete(${todoItem[0]});"></i>
+        </div>
+    `).join('');
 }
 
-renderTodoList();
+const prepareTodos = (todos) => {
+    for (let i = 0; i <= 10; i++) {
+        todoList.push([i, todos[i].title]);
+    }
+
+    renderTodoList();
+}
 
 collapseButton.onclick = () => {
     if (sidebar.classList.contains('closed')) {
@@ -47,8 +50,20 @@ collapseButton.onclick = () => {
     }
 };
 
-addTodoButton.onclick = () => {
+$('.to-do-header-icon').click(() => {
     const newId = todoList?.at(-1)?.[0] ?? 0;
     todoList.push([newId + 1, '']);
+    $.ajax({
+        method: 'POST',
+        url: './data/data.json',
+        success: (resp) => console.log(resp)
+    });
     renderTodoList();
-}
+});
+
+$(document).ready(() => {
+    $.ajax({
+        url: './data/data.json',
+        success: prepareTodos
+    });
+});
